@@ -1,22 +1,24 @@
 ###############################################################################
-###                 AN¡LISE DO NÕVEL DE CORRELA«√O ENTRE AS TAXAS VITAIS	# 
-###				DOS DADOS UTILIZADOS POR PFISTER 1998  		      #
+#			     EM CONSTRU√á√ÉO!!!!!!			      #
+###############################################################################
+###                 AN√ÅLISE DO N√çVEL DE CORRELA√á√ÉO ENTRE AS TAXAS VITAIS      # 
+###				DOS DADOS UTILIZADOS POR PFISTER 1998         #
 ###############################################################################
 ###                                                                           #
-###      As an·lises que seguem s„o a tentativa de avaliar o quanto os dados  #
-###    obtidos por Catherine Pfister em seu artigo cl·ssico publicado na PNAS #
+###      As an√°lises que seguem s√£o a tentativa de avaliar o quanto os dados  #
+###    obtidos por Catherine Pfister em seu artigo cl√°ssico publicado na PNAS #
 ###  "Patterns of variance in stage-structured populations: evolutionary      #
-### predictions and ecological implications" s„o auto-correlacionados entre 	#
-###              si, uma vez que isso È de grande import‚ncia para		#
-###		     sabermos como analisar de forma adequada esses ados          #         
+### predictions and ecological implications" s√£o auto-correlacionados entre   #
+###              si, uma vez que isso √© de grande import√¢ncia para	      #
+###		     sabermos como analisar de forma adequada esses ados      #         
 ###                                                                           #
 ###                                                                           #
 ###                                                                           #
 ###############################################################################
-###   		Para facilitar o processo, eu utilizei algumas 			#
-###	funÁıes previamente criadas criadas por mim, com apenas algumas 		#
-###	modificaÁıes para adequaÁ„o ‡ proposta desse script, que È a avaliaÁ„o  #
-###	do grau de correlaÁ„o entre as taxas vitais analisadas			#		                                 
+###   		Para facilitar o processo, eu utilizei algumas 		      #
+###	fun√ß√µes previamente criadas criadas por mim, com apenas algumas       #
+###  modifica√ß√µes para adequa√ß√£o √† proposta desse script, que √© a avalia√ß√£o   #
+###	do grau de correla√ß√£o entre as taxas vitais analisadas		      #		                                 
 ###                                                                           #
 ###############################################################################
      
@@ -47,7 +49,7 @@ nummean <-mean(num)
 nummean
 
 #================================================================================
-###############         ==== CRIANDO AS FUN«’ES UTILZIADAS====         	#########
+###############         ==== CRIANDO AS FUN√á√ïES UTILZIADAS====         	#########
 #================================================================================
 
 
@@ -84,23 +86,23 @@ PLOTDOC<- function (A)
 	vr$VR<- VitalRate<-as.factor(as.vector((ifelse(a == 1, "Fertility", "Survival"))))
 
 ###################################################################################
-							#Aqui È necess·rio retirar os valores 
-    							#referentes ‡ medias zero pois elas 
-  vr1 <- subset(vr, mean > 0 & var > 0)	#Se tornar„o valores NaN e interrogaÁıes 
-							#no resultado das an·lises de correlaÁ„o 
-							#e no gr·fico gerado pela funÁ„o corrplot
+							#Aqui √© necess√°rio retirar os valores 
+    							#referentes √† medias zero pois elas 
+  vr1 <- subset(vr, mean > 0 & var > 0)	#Se tornar√£o valores NaN e interroga√ß√µes 
+							#no resultado das an√°lises de correla√ß√£o 
+							#e no gr√°fico gerado pela fun√ß√£o corrplot
 ######################################################################################
- 					#Aqui se encontra a principal modificaÁ„o desse script
-					#Na vers„o original a funÁao pfister.plot retorna apenas os 
-	   vr1[, 1:n ]		# valores j· computados de mÈdia, elasticidade e sensibilidade
+ 					#Aqui se encontra a principal modifica√ß√£o desse script
+					#Na vers√£o original a fun√ßao pfister.plot retorna apenas os 
+	   vr1[, 1:n ]		# valores j√° computados de m√©dia, elasticidade e sensibilidade
 					# Aqui eu consegui fazer retornar em forma de lista as taxas
-					# vitais referente ‡ todas as observaÁıes na matrix	
+					# vitais referente √† todas as observa√ß√µes na matrix	
 ######################################################################################
 }
 
 #================================================================================
-###  ==== CRIANDO MATRIZES ALEAT”RIAS COM DISTRIBUI«√O BETA A PARTIR    ====  ###
-#	==		DA M…DIA E DA VARI¬NCIA DE CADA CLASSE ET¡RIA		==	  #
+###  ==== CRIANDO MATRIZES ALEAT√ìRIAS COM DISTRIBUI√á√ÉO BETA A PARTIR    ====  ###
+#	==		DA M√âDIA E DA VARI√ÇNCIA DE CADA CLASSE ET√ÅRIA		==	  #
 #================================================================================
 
 
@@ -126,9 +128,9 @@ return(as.data.frame(vr1$beta,row.names=row.names(vr1)))
 
 
 #================================================================================
-##      ==== CRIANDO A FUN«√O PARA DETECTAR VALORES CRÕTICOS ====            ####
+##      ==== CRIANDO A FUN√á√ÉO PARA DETECTAR VALORES CR√çTICOS ====            ####
 #================================================================================
-# FunÁ„o retirada na integra do link: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+# Fun√ß√£o retirada na integra do link: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 #================================================================================
 
 d<-cbind(rnorm(1:100),rnorm(1:10000))
@@ -145,28 +147,28 @@ critical.r (length(d))
 
 
 #================================================================================
-# FunÁ„o Para comparar a frequÍncia de valores significativos
+# Fun√ß√£o Para comparar a frequ√™ncia de valores significativos
 #================================================================================
 
 ComparedPairs <-function(A,n){
-#Sendo A uma matriz de correlaÁ„o qualquer no presente estudo representada por cor(t(PLOTDOC(n)))
-#e n o n˙mero de matrizes existentes que ir· representar o tempo
+#Sendo A uma matriz de correla√ß√£o qualquer no presente estudo representada por cor(t(PLOTDOC(n)))
+#e n o n√∫mero de matrizes existentes que ir√° representar o tempo
 	A[upper.tri(A)] <- Inf
 	b<-critical.r(length(n))
 return(list(
-#Tamanho total da matriz de correlaÁ„o (elementos em "cor(cor(t(PLOTDOC(n))"
+#Tamanho total da matriz de correla√ß√£o (elementos em "cor(cor(t(PLOTDOC(n))"
 	"Correlation matrix length" =	length(A),
-#N˙mero de elemetos na porÁ„o triangular superior (sem a diagonal =1)
+#N√∫mero de elemetos na por√ß√£o triangular superior (sem a diagonal =1)
 	"Upper length" = 	sum(A == Inf),
-#Valor crÌtico
+#Valor cr√≠tico
 	"Critical value of significance" = b,
 #Elementos SIGNITIVCATIVOS (+ & -)
 	"Signitive values"= sum(A >= b & A <1) + sum(A <= (b*-1)),
-#Elementos ACIMA acima do valor crÌtico de significancia
+#Elementos ACIMA acima do valor cr√≠tico de significancia
 	"POSITIVE significative values" = sum(A >= b & A <1),
-#Elementos ACIMA acima do valor crÌtico de significancia
+#Elementos ACIMA acima do valor cr√≠tico de significancia
 	"NEGATIVE significative values" = sum(A <= (b*-1)),
-#Elementos n„o significativos
+#Elementos n√£o significativos
 	"NOT Sinigficative (p > 0.05)" = sum(A > (b*-1) & A < b)))
 }
 
@@ -181,7 +183,7 @@ return(list(
 #================================================================================
 ###############                 ==== ANALISE POR TRABALHO ====         	#########
 #================================================================================
-#### PRESTAR ATEN«¬O QUE TODOS VIRAR√O n PARA OTIMIZAR AS AN¡LISES
+#### PRESTAR ATEN√á√ÇO QUE TODOS VIRAR√ÉO n PARA OTIMIZAR AS AN√ÅLISES
 
 #				n
 
@@ -194,14 +196,14 @@ return(list(
 n<-bengtsson1993<-lapply(list(mylist[[3]],mylist[[4]],mylist[[5]],mylist[[6]],mylist[[7]],mylist[[8]]),as.matrix)
 bengtsson1993
 
-#Gr·fico de correlaÁıes comparativo
+#Gr√°fico de correla√ß√µes comparativo
 par(mfrow=c(2,2))
 
-#Matriz de correlaÁıes
+#Matriz de correla√ß√µes
 corrplot(cor(t(PLOTDOC(n))),type = "upper")
 corrplot(cor(t(BNM(n))),type="upper")
 
-#Histogramas de distribuiÁ„o de valores de coeficiente de correlaÁ„o (rho)
+#Histogramas de distribui√ß√£o de valores de coeficiente de correla√ß√£o (rho)
 #Dados originais
 hist((cor(t(PLOTDOC(n))))
 [!cor(PLOTDOC(n))==1]
@@ -216,12 +218,12 @@ hist((cor(t(PLOTDOC(n))))
 ,main="Null Model Matrix correlation",xlab="rho")
 
 
-#Comparando a proporÁ„o de valores significativos positivos, signif. negativos e n„o significativos
+#Comparando a propor√ß√£o de valores significativos positivos, signif. negativos e n√£o significativos
 ComparedPairs (cor(t(PLOTDOC(n))),n)
 ComparedPairs (cor(t(BNM(n))),n)
 
-#Comparando se a proporÁ„o de valores significativos È estatisticamente diferente do esperado ao caso
-#Segundo as correlaÁıes geradas a partir de uma matriz criada aleatÛriamente
+#Comparando se a propor√ß√£o de valores significativos √© estatisticamente diferente do esperado ao caso
+#Segundo as correla√ß√µes geradas a partir de uma matriz criada aleat√≥riamente
 
 
 chisq.test(matrix(cbind(ComparedPairs (cor(t(PLOTDOC(n))),n)$"Signitive values",
@@ -264,7 +266,7 @@ abline(v=(critical.r(length(n))*-1),lty=2,col="red")
 ###CHARRON E GAGNON 1991
 ##############################################################################
 
-###TOTAL    Todas as populaÁıes amostradas
+###TOTAL    Todas as popula√ß√µes amostradas
 
 n<-CG1991<-lapply(list(mylist[[13]],mylist[[14]],mylist[[15]],mylist[[16]],mylist[[17]],mylist[[18]],mylist[[19]],mylist[[20]]),as.matrix)
 CG1991
