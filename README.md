@@ -1,7 +1,7 @@
 # Evolutionary-Demography
 Some scripts used to my PhD
 
-I'm PhD student at Evolutionary ecology in University of state of Rio de Janeiro under supervision of Maja Kajin
+I'm PhD student of Evolutionary ecology in University of state of Rio de Janeiro under supervision of Maja Kajin
 
 My PhD focus in evolutionary trade-off between survival and fecundity using population matrices avaliable in literature.
 This reason I use popbio package all the time but sometimes is necessary adapt the functions available to my questions.
