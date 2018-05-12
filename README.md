@@ -1,13 +1,13 @@
 # Evolutionary-Demography
 Some scripts used to my PhD
 
-I'm PhD student of Evolutionary ecology in University of state of Rio de Janeiro under supervision of Maja Kajin
+I'm PhD student of Evolutionary ecology in University of State of Rio de Janeiro (UERJ) under supervision of Maja Kajin
 
-My PhD focus in evolutionary trade-off between survival and fecundity using population matrices avaliable in literature.
-This reason I use popbio package all the time but sometimes is necessary adapt the functions available to my questions.
+My PhD focus in evolutionary trade-off between survival and fecundity using animal (and why not plants too?) population matrices avaliable in literature.
+I often use popbio package, but sometimes is really necessary to adapt some functions to deal with some problems.
 
-I start use R few years ago, using extensively for my Master researches and did some scripts that I love sharing with other people.
+I started to use R a few years ago, but just using extensively for my Master researches when I did some scripts that I love sharing with other people.
 
-I belive in open science and think that is the way to do good science. I hope contribute to you with my past projects and actual projects.
+I belief in the Open Science and think that is the way to do good science. I hope to contribute to you with my past projects and actual projects.
 
-If you have some contribution, wanna talk about R ideas or need help send an email: ssantos.gabriel@gmail.com
+If you have some contribution, let's talk about and If you need some help be free to email me: ssantos.gabriel@gmail.com
