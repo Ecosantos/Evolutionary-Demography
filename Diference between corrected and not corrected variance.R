@@ -1,8 +1,8 @@
 #################################################################
-####		SCRIPT TO SHOW GRAPHICALLY THE IMPORTANCE TO 	#####
-####		  CORRECT VARIANCE ACCORDING WITH MAXIMUM 	#####
-####				VARIANCE POSSIBLE				#####
-####		(only for vital rates range [0,1]		 	#####
+####		    SRIPT TO SHOW GRAPHICALLY THE IMPORTANCE TO 	     #####
+####      		  CORRECT VARIANCE ACCORDING WITH MAXIMUM 	     #####
+####				                    VARIANCE POSSIBLE				           #####
+####		           (only for vital rates range [0,1])     		 	#####
 #################################################################
 
 # As discussed in my qualification, as better detailed by Morris and Doak 2004
@@ -10,8 +10,8 @@
 # by corrected they respective maximum variance
 
 ### References
-#Morris, W. F., and D. F. Doak. 2004. Buffering of life histories against environmental stochasticity: accounting for a spurious correlation between the variabilities of vital rates and their contributions to fitness. The American naturalist 163:579–590.
-#Morris, W. F., J. Altmann, D. K. Brockman, M. Cords, L. M. Fedigan, A. E. Pusey, T. S. Stoinski, A. M. Bronikowski, S. C. Alberts, and K. B. Strier. 2011. Low Demographic Variability in Wild Primate Populations: Fitness Impacts of Variation, Covariation, and Serial Correlation in Vital Rates. The American Naturalist 177:E14–E28.
+#Morris, W. F., and D. F. Doak. 2004. Buffering of life histories against environmental stochasticity: accounting for a spurious correlation between the variabilities of vital rates and their contributions to fitness. The American naturalist 163:579â€“590.
+#Morris, W. F., J. Altmann, D. K. Brockman, M. Cords, L. M. Fedigan, A. E. Pusey, T. S. Stoinski, A. M. Bronikowski, S. C. Alberts, and K. B. Strier. 2011. Low Demographic Variability in Wild Primate Populations: Fitness Impacts of Variation, Covariation, and Serial Correlation in Vital Rates. The American Naturalist 177:E14â€“E28.
 
 # Maximum variance correction was also discussed in this post: 
 https://math.stackexchange.com/questions/769923/maximum-possible-variance
