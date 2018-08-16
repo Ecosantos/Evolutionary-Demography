@@ -1,9 +1,10 @@
 #################################################################
-####		    SRIPT TO SHOW GRAPHICALLY THE IMPORTANCE TO 	     #####
-####      		  CORRECT VARIANCE ACCORDING WITH MAXIMUM 	     #####
-####				                    VARIANCE POSSIBLE				           #####
-####		           (only for vital rates range [0,1])     		 	#####
+####		SCRIPT TO SHOW GRAPHICALLY THE IMPORTANCE TO 	#####
+####		  CORRECT VARIANCE ACCORDING WITH MAXIMUM 	#####
+####				VARIANCE POSSIBLE				#####
+####		(only for vital rates range [0,1])		 	#####
 #################################################################
+
 
 # As discussed in my qualification, as better detailed by Morris and Doak 2004
 # and followed by Morris et al. 2011, vital rates range from 0 to 1 need to 
