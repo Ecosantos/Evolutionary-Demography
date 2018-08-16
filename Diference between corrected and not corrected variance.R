@@ -1,7 +1,7 @@
 #################################################################
 ####	   	SCRIPT TO SHOW GRAPHICALLY THE IMPORTANCE TO 	      
 ####		    CORRECT VARIANCE ACCORDING WITH MAXIMUM 	
-####				          VARIANCE POSSIBLE				
+####				       VARIANCE POSSIBLE				
 ####		     (only for vital rates range [0,1])		 	
 #################################################################
 
